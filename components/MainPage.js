@@ -11,7 +11,7 @@ import Row from './Row'
 import Header from './Header'
 import SectionHeader from './SectionHeader'
 import Footer from './Footer'
-import demoData from './../data'
+import demoData from './../saleData'
 
 
 export default class MainPage extends React.Component {
@@ -33,7 +33,7 @@ export default class MainPage extends React.Component {
     };
     formatData(data) {
         // We're sorting by alphabetically so we need the alphabet
-        const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+        const alphabet = 'Men Women Children Baby'.split(' ');
 
         // Need somewhere to store our data
         const dataBlob = {};
@@ -46,8 +46,8 @@ export default class MainPage extends React.Component {
             const currentChar = alphabet[sectionId];
 
             // Get users whose first name starts with the current letter
-            const users = data.filter((user) => user.name.first.toUpperCase().indexOf(currentChar) === 0);
-
+            const users = data.filter((user) => user.types===currentChar);
+            console.log(users);
             // If there are any users who have a first name starting with the current letter then we'll
             // add a new section otherwise we just skip over it
             if (users.length > 0) {
