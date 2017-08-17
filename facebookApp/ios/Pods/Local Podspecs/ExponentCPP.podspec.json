@@ -1,0 +1,20 @@
+{
+  "name": "ExponentCPP",
+  "version": "1.0.0",
+  "license": "BSD-Exponent",
+  "homepage": "https://github.com/exponent/exponent/tree/master/cpp",
+  "authors": {
+    "Nikhilesh Sigatapu": "nikki@getexponent.com"
+  },
+  "summary": "Cross-platform C/C++ library for Exponent client code",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source": {
+    "path": "."
+  },
+  "source_files": [
+    "*.{h,c,cpp,m,mm}",
+    "**/*.{h,c,cpp,m,mm}"
+  ]
+}

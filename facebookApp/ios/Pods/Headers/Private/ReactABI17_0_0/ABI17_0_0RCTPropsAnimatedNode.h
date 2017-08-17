@@ -1,0 +1,1 @@
+../../../../versioned-react-native/ABI17_0_0/Libraries/NativeAnimation/Nodes/ABI17_0_0RCTPropsAnimatedNode.h

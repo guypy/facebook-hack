@@ -1,0 +1,19 @@
+{
+  "name": "RCTTest",
+  "version": "0.45.1",
+  "summary": "A framework for building native apps using React",
+  "description": "RCTTest hack spec",
+  "homepage": "http://facebook.github.io/react-native/",
+  "license": "BSD-3-Clause",
+  "authors": "Facebook",
+  "requires_arc": true,
+  "platforms": {
+    "ios": "8.0"
+  },
+  "header_dir": "React",
+  "source": {
+    "git": "https://github.com/expo/react-native.git"
+  },
+  "source_files": "Libraries/RCTTest/**/*.{h,m}",
+  "frameworks": "XCTest"
+}

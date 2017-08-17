@@ -1,0 +1,1 @@
+../../../../versioned-react-native/ABI17_0_0/Libraries/Image/ABI17_0_0RCTGIFImageDecoder.h

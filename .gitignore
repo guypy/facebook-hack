@@ -1,3 +1,5 @@
 node_modules/**/*
+facebookApp/js/node_modules/**/*
+facebookApp/tools-public/node_modules/**/*
 .expo/*
 npm-debug.*

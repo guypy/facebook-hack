@@ -1,0 +1,1 @@
+../../../../versioned-react-native/ABI18_0_0/Exponent/ABI18_0_0EXUnversioned.h

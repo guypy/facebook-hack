@@ -1,0 +1,1 @@
+../../../../versioned-react-native/ABI17_0_0/Libraries/Vibration/ABI17_0_0RCTVibration.h

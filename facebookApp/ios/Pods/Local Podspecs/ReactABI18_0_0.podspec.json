@@ -1,0 +1,316 @@
+{
+  "name": "ReactABI18_0_0",
+  "version": "0.45.1",
+  "summary": "A framework for building native apps using React",
+  "description": "React Native apps are built using the React JS\nframework, and render directly to native UIKit\nelements using a fully asynchronous architecture.\nThere is no browser and no HTML. We have picked what\nwe think is the best set of features from these and\nother technologies to build what we hope to become\nthe best product development framework available,\nwith an emphasis on iteration speed, developer\ndelight, continuity of technology, and absolutely\nbeautiful and fast products with no compromises in\nquality or capability.",
+  "homepage": "http://facebook.github.io/react-native/",
+  "license": "BSD-3-Clause",
+  "authors": "Facebook",
+  "source": {
+    "path": "."
+  },
+  "default_subspecs": "Core",
+  "requires_arc": true,
+  "platforms": {
+    "ios": "8.0"
+  },
+  "pod_target_xcconfig": {
+    "CLANG_CXX_LANGUAGE_STANDARD": "c++14"
+  },
+  "preserve_paths": [
+    "package.json",
+    "LICENSE",
+    "LICENSE-CustomComponents",
+    "PATENTS"
+  ],
+  "cocoapods_version": ">= 1.2.0",
+  "subspecs": [
+    {
+      "name": "Core",
+      "dependencies": {
+        "YogaABI18_0_0": [
+          "0.45.1.React"
+        ]
+      },
+      "source_files": "React/**/*.{c,h,m,mm,S}",
+      "exclude_files": [
+        "**/__tests__/*",
+        "IntegrationTests/*",
+        "React/DevSupport/*",
+        "React/**/ABI18_0_0RCTTVView.*",
+        "ReactCommon/ABI18_0_0yoga/*",
+        "React/Cxx*/*",
+        "React/Base/ABI18_0_0RCTBatchedBridge.mm",
+        "React/Executors/*"
+      ],
+      "frameworks": "JavaScriptCore",
+      "libraries": "stdc++"
+    },
+    {
+      "name": "Exponent",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Exponent/**/*.{h,m}"
+    },
+    {
+      "name": "BatchedBridge",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ],
+        "ReactABI18_0_0/cxxReactABI18_0_0_legacy": [
+
+        ]
+      },
+      "source_files": [
+        "React/Base/ABI18_0_0RCTBatchedBridge.mm",
+        "React/Executors/*"
+      ]
+    },
+    {
+      "name": "CxxBridge",
+      "dependencies": {
+        "Folly": [
+
+        ],
+        "ReactABI18_0_0/Core": [
+
+        ],
+        "ReactABI18_0_0/cxxReactABI18_0_0": [
+
+        ]
+      },
+      "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1",
+      "private_header_files": "React/Cxx*/*.h",
+      "source_files": "React/Cxx*/*.{h,m,mm}"
+    },
+    {
+      "name": "DevSupport",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ],
+        "ReactABI18_0_0/RCTWebSocket": [
+
+        ]
+      },
+      "source_files": "React/DevSupport/*"
+    },
+    {
+      "name": "tvOS",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "React/**/RCTTVView.{h, m}"
+    },
+    {
+      "name": "ABI18_0_0jschelpers_legacy",
+      "source_files": [
+        "ReactCommon/ABI18_0_0jschelpers/{ABI18_0_0JavaScriptCore,ABI18_0_0JSCWrapper}.{cpp,h}",
+        "ReactCommon/ABI18_0_0jschelpers/ABI18_0_0systemJSCWrapper.cpp"
+      ],
+      "private_header_files": "ReactCommon/ABI18_0_0jschelpers/{ABI18_0_0JavaScriptCore,ABI18_0_0JSCWrapper}.h",
+      "pod_target_xcconfig": {
+        "HEADER_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/ReactCommon\""
+      },
+      "frameworks": "JavaScriptCore"
+    },
+    {
+      "name": "cxxReactABI18_0_0_legacy",
+      "dependencies": {
+        "ReactABI18_0_0/ABI18_0_0jschelpers_legacy": [
+
+        ]
+      },
+      "source_files": "ReactCommon/cxxReactABI18_0_0/{ABI18_0_0JSBundleType,ABI18_0_0oss-compat-util}.{cpp,h}",
+      "private_header_files": "ReactCommon/cxxReactABI18_0_0/{ABI18_0_0JSBundleType,ABI18_0_0oss-compat-util}.h",
+      "pod_target_xcconfig": {
+        "HEADER_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/ReactCommon\""
+      }
+    },
+    {
+      "name": "ABI18_0_0jschelpers",
+      "dependencies": {
+        "Folly": [
+
+        ]
+      },
+      "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1",
+      "source_files": "ReactCommon/ABI18_0_0jschelpers/*.{cpp,h}",
+      "private_header_files": "ReactCommon/ABI18_0_0jschelpers/*.h",
+      "pod_target_xcconfig": {
+        "HEADER_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/ReactCommon\""
+      },
+      "frameworks": "JavaScriptCore"
+    },
+    {
+      "name": "cxxReactABI18_0_0",
+      "dependencies": {
+        "ReactABI18_0_0/ABI18_0_0jschelpers": [
+
+        ],
+        "boost": [
+
+        ],
+        "Folly": [
+
+        ]
+      },
+      "compiler_flags": "-DFOLLY_NO_CONFIG -DFOLLY_MOBILE=1 -DFOLLY_USE_LIBCPP=1",
+      "source_files": "ReactCommon/cxxReactABI18_0_0/*.{cpp,h}",
+      "exclude_files": "ReactCommon/cxxReactABI18_0_0/ABI18_0_0JSCTracing.cpp",
+      "private_header_files": "ReactCommon/cxxReactABI18_0_0/*.h",
+      "pod_target_xcconfig": {
+        "HEADER_SEARCH_PATHS": "\"$(PODS_TARGET_SRCROOT)/ReactCommon\" \"$(PODS_ROOT)/boost\" \"$(PODS_ROOT)/DoubleConversion\""
+      }
+    },
+    {
+      "name": "ART",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/ART/**/*.{h,m}"
+    },
+    {
+      "name": "RCTActionSheet",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/ActionSheetIOS/*.{h,m}"
+    },
+    {
+      "name": "RCTAdSupport",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/AdSupport/*.{h,m}"
+    },
+    {
+      "name": "RCTAnimation",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/NativeAnimation/{Drivers/*,Nodes/*,*}.{h,m}",
+      "header_dir": "ABI18_0_0RCTAnimation"
+    },
+    {
+      "name": "RCTCameraRoll",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ],
+        "ReactABI18_0_0/RCTImage": [
+
+        ]
+      },
+      "source_files": "Libraries/CameraRoll/*.{h,m}"
+    },
+    {
+      "name": "RCTGeolocation",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/Geolocation/*.{h,m}"
+    },
+    {
+      "name": "RCTImage",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ],
+        "ReactABI18_0_0/RCTNetwork": [
+
+        ]
+      },
+      "source_files": "Libraries/Image/*.{h,m}"
+    },
+    {
+      "name": "RCTNetwork",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/Network/*.{h,m,mm}"
+    },
+    {
+      "name": "RCTPushNotification",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/PushNotificationIOS/*.{h,m}"
+    },
+    {
+      "name": "RCTSettings",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/Settings/*.{h,m}"
+    },
+    {
+      "name": "RCTText",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/Text/*.{h,m}"
+    },
+    {
+      "name": "RCTVibration",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/Vibration/*.{h,m}"
+    },
+    {
+      "name": "RCTWebSocket",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/WebSocket/*.{h,m}"
+    },
+    {
+      "name": "RCTLinkingIOS",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/LinkingIOS/*.{h,m}"
+    },
+    {
+      "name": "RCTTest",
+      "dependencies": {
+        "ReactABI18_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/RCTTest/**/*.{h,m}",
+      "frameworks": "XCTest"
+    }
+  ]
+}

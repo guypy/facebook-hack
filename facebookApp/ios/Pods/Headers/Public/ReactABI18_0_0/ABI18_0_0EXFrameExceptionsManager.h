@@ -1,0 +1,1 @@
+../../../../versioned-react-native/ABI18_0_0/Exponent/Modules/Internal/Frame/ABI18_0_0EXFrameExceptionsManager.h

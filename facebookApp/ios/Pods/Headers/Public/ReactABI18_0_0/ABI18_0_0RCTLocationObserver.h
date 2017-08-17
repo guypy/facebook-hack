@@ -1,0 +1,1 @@
+../../../../versioned-react-native/ABI18_0_0/Libraries/Geolocation/ABI18_0_0RCTLocationObserver.h

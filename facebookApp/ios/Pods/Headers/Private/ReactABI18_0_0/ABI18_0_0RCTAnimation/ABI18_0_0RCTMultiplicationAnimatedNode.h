@@ -1,0 +1,1 @@
+../../../../../versioned-react-native/ABI18_0_0/Libraries/NativeAnimation/Nodes/ABI18_0_0RCTMultiplicationAnimatedNode.h

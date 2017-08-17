@@ -1,0 +1,1 @@
+../../../../versioned-react-native/ABI17_0_0/Exponent/Modules/Api/FBAds/ABI17_0_0EXNativeAdManager.h

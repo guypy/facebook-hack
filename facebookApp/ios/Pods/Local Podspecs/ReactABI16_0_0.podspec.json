@@ -1,0 +1,249 @@
+{
+  "name": "ReactABI16_0_0",
+  "version": "0.43.2",
+  "summary": "A framework for building native apps using React",
+  "description": "React Native apps are built using the React JS\nframework, and render directly to native UIKit\nelements using a fully asynchronous architecture.\nThere is no browser and no HTML. We have picked what\nwe think is the best set of features from these and\nother technologies to build what we hope to become\nthe best product development framework available,\nwith an emphasis on iteration speed, developer\ndelight, continuity of technology, and absolutely\nbeautiful and fast products with no compromises in\nquality or capability.",
+  "homepage": "http://facebook.github.io/react-native/",
+  "license": "BSD-3-Clause",
+  "authors": "Facebook",
+  "source": {
+    "path": "."
+  },
+  "default_subspecs": "Core",
+  "requires_arc": true,
+  "platforms": {
+    "ios": "8.0"
+  },
+  "pod_target_xcconfig": {
+    "CLANG_CXX_LANGUAGE_STANDARD": "c++14"
+  },
+  "preserve_paths": [
+    "package.json",
+    "LICENSE",
+    "LICENSE-CustomComponents",
+    "PATENTS"
+  ],
+  "cocoapods_version": ">= 1.2.0",
+  "subspecs": [
+    {
+      "name": "Core",
+      "dependencies": {
+        "YogaABI16_0_0": [
+          "0.43.2.React"
+        ],
+        "ReactABI16_0_0/cxxReactABI16_0_0": [
+
+        ]
+      },
+      "source_files": "React/**/*.{c,h,m,mm,S}",
+      "exclude_files": [
+        "**/__tests__/*",
+        "IntegrationTests/*",
+        "React/DevSupport/*",
+        "React/Modules/ABI16_0_0RCTDev{LoadingView,Menu}.*",
+        "React/**/ABI16_0_0RCTTVView.*",
+        "ReactCommon/ABI16_0_0yoga/*",
+        "React/Cxx*/*"
+      ],
+      "frameworks": "JavaScriptCore",
+      "libraries": "stdc++"
+    },
+    {
+      "name": "Exponent",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Exponent/**/*.{h,m}"
+    },
+    {
+      "name": "DevSupport",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ],
+        "ReactABI16_0_0/RCTWebSocket": [
+
+        ]
+      },
+      "source_files": [
+        "React/DevSupport/*",
+        "React/Modules/ABI16_0_0RCTDev{LoadingView,Menu}.*"
+      ]
+    },
+    {
+      "name": "tvOS",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "React/**/ABI16_0_0RCTTVView.{h, m}"
+    },
+    {
+      "name": "ABI16_0_0jschelpers",
+      "source_files": "ReactCommon/ABI16_0_0jschelpers/{ABI16_0_0JavaScriptCore,ABI16_0_0JSCWrapper}.{cpp,h}",
+      "private_header_files": "ReactCommon/ABI16_0_0jschelpers/{ABI16_0_0JavaScriptCore,ABI16_0_0JSCWrapper}.h",
+      "pod_target_xcconfig": {
+        "HEADER_SEARCH_PATHS": "$(PODS_TARGET_SRCROOT)/ReactCommon"
+      },
+      "frameworks": "JavaScriptCore"
+    },
+    {
+      "name": "cxxReactABI16_0_0",
+      "dependencies": {
+        "ReactABI16_0_0/ABI16_0_0jschelpers": [
+
+        ]
+      },
+      "source_files": "ReactCommon/cxxReactABI16_0_0/{ABI16_0_0JSBundleType,ABI16_0_0oss-compat-util}.{cpp,h}",
+      "private_header_files": "ReactCommon/cxxReactABI16_0_0/{ABI16_0_0JSBundleType,ABI16_0_0oss-compat-util}.h",
+      "pod_target_xcconfig": {
+        "HEADER_SEARCH_PATHS": "$(PODS_TARGET_SRCROOT)/ReactCommon"
+      }
+    },
+    {
+      "name": "ART",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/ART/**/*.{h,m}"
+    },
+    {
+      "name": "RCTActionSheet",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/ActionSheetIOS/*.{h,m}"
+    },
+    {
+      "name": "RCTAdSupport",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/AdSupport/*.{h,m}"
+    },
+    {
+      "name": "RCTAnimation",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/NativeAnimation/{Drivers/*,Nodes/*,*}.{h,m}"
+    },
+    {
+      "name": "RCTCameraRoll",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ],
+        "ReactABI16_0_0/RCTImage": [
+
+        ]
+      },
+      "source_files": "Libraries/CameraRoll/*.{h,m}"
+    },
+    {
+      "name": "RCTGeolocation",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/Geolocation/*.{h,m}"
+    },
+    {
+      "name": "RCTImage",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ],
+        "ReactABI16_0_0/RCTNetwork": [
+
+        ]
+      },
+      "source_files": "Libraries/Image/*.{h,m}"
+    },
+    {
+      "name": "RCTNetwork",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/Network/*.{h,m,mm}"
+    },
+    {
+      "name": "RCTPushNotification",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/PushNotificationIOS/*.{h,m}"
+    },
+    {
+      "name": "RCTSettings",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/Settings/*.{h,m}"
+    },
+    {
+      "name": "RCTText",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/Text/*.{h,m}"
+    },
+    {
+      "name": "RCTVibration",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/Vibration/*.{h,m}"
+    },
+    {
+      "name": "RCTWebSocket",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/WebSocket/*.{h,m}"
+    },
+    {
+      "name": "RCTLinkingIOS",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/LinkingIOS/*.{h,m}"
+    },
+    {
+      "name": "RCTTest",
+      "dependencies": {
+        "ReactABI16_0_0/Core": [
+
+        ]
+      },
+      "source_files": "Libraries/RCTTest/**/*.{h,m}",
+      "frameworks": "XCTest"
+    }
+  ]
+}

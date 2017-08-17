@@ -1,0 +1,1 @@
+../../../../versioned-react-native/ABI18_0_0/Libraries/ART/ViewManagers/ABI18_0_0ARTShapeManager.h

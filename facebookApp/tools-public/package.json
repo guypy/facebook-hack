@@ -1,0 +1,23 @@
+{
+  "name": "@expo/expo-tools-public",
+  "version": "1.0.0",
+  "private": true,
+  "author": "650 Industries",
+  "license": "Copyright 2013-present 650 Industries",
+  "dependencies": {
+    "@ccheever/crayon": "^5.0.0",
+    "@expo/mux": "^1.0.6",
+    "@exponent/json-file": "^5.2.0",
+    "@exponent/spawn-async": "^1.2.4",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-shell": "^0.5.2",
+    "instapromise": "^2.0.7",
+    "lodash": "^4.13.1",
+    "minimist": "^1.2.0",
+    "promise-props": "^1.0.0",
+    "request": "^2.72.0",
+    "shelljs": "^0.7.0",
+    "username": "^2.2.2",
+    "xdl": "33.0.0"
+  }
+}

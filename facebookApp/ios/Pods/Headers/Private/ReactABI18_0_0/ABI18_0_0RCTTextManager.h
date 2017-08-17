@@ -1,0 +1,1 @@
+../../../../versioned-react-native/ABI18_0_0/Libraries/Text/ABI18_0_0RCTTextManager.h
